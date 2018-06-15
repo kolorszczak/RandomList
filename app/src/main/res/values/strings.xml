@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RandomList</string>
+    <string name="confirmQuit">Confirm quit</string>
+    <string name="confirmQuitContent">Do you really want to quit?</string>
+    <string name="quit">Quit</string>
+    <string name="cancel">Cancel</string>
+</resources>
