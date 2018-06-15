@@ -3,7 +3,6 @@ package eu.mihau.randomlist.base;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.graphics.Rect;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.view.MotionEvent;
 import android.view.View;
@@ -11,9 +10,10 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
+import dagger.android.support.DaggerAppCompatActivity;
 import eu.mihau.randomlist.R;
 
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends DaggerAppCompatActivity {
 
     @Override
     public void onBackPressed() {

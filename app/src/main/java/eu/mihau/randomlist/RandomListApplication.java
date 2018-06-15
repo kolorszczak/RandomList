@@ -1,10 +1,14 @@
 package eu.mihau.randomlist;
 
-import android.app.Application;
-
 import com.facebook.stetho.Stetho;
 
-public class RandomListApplication extends Application {
+import dagger.android.AndroidInjector;
+import dagger.android.support.DaggerApplication;
+import eu.mihau.randomlist.di.component.AppComponent;
+import eu.mihau.randomlist.di.component.DaggerAppComponent;
+import eu.mihau.randomlist.di.module.AppModule;
+
+public class RandomListApplication extends DaggerApplication {
 
     @Override
     public void onCreate() {
@@ -12,5 +16,16 @@ public class RandomListApplication extends Application {
         if (BuildConfig.DEBUG) {
             Stetho.initializeWithDefaults(this);
         }
+    }
+
+    @Override
+    protected AndroidInjector<? extends DaggerApplication> applicationInjector() {
+        AppComponent appComponent = DaggerAppComponent
+                .builder()
+                .application(this)
+                .appModule(new AppModule(this))
+                .build();
+        appComponent.inject(this);
+        return appComponent;
     }
 }
