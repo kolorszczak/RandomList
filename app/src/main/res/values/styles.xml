@@ -16,4 +16,15 @@
     <style name="AppTheme.Launcher">
         <item name="android:windowBackground">@drawable/drawable_launch_screen</item>
     </style>
+
+    <style name="TextView" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ImageView">
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
 </resources>

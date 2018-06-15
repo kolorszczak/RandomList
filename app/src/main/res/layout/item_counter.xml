@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="text"
+            type="String" />
+        <variable
+            name="tint"
+            type="Integer" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_padding"
+        android:layout_marginRight="@dimen/default_padding"
+        app:cardCornerRadius="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/default_padding">
+
+            <ImageView
+                style="@style/ImageView"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/drawable_dot"
+                app:backgroundTint="@{tint}"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:padding="@dimen/half_padding"
+                android:text="@{text}"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/text_size_medium"
+                tools:text="Test"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</layout>

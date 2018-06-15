@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+            android:paddingLeft="@dimen/half_padding"
+            android:paddingRight="@dimen/half_padding"
+            android:paddingTop="@dimen/half_padding"
+            android:paddingBottom="@dimen/half_padding"
+            android:opacity="opaque">
+    <item>
+        <shape android:shape="line">
+            <stroke android:width="@dimen/small_padding" android:color="@color/md_black_1000"/>
+        </shape>
+    </item>
+
+</layer-list>
