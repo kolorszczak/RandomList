@@ -67,24 +67,27 @@ public class MainViewModel extends ViewModel {
             randomEventPublishSubject.onNext(new RandomEvent(RandomEvent.Type.CREATE, list.size() - 1, element));
             Log.d(TAG, "NEW element");
         } else {
-            Integer randomPosition = randomProvider.getPercent() % list.size();
+            int percent = randomProvider.getPercent();
+            Integer randomPosition = percent % list.size();
             Element randomElement = list.get(randomPosition);
-            if (isInRange(randomProvider.getPercent(), 0, 49)) {
+            if (isInRange(percent, 0, 49)) {
                 Log.d(TAG, "+1 to counter of " + randomPosition + " element");
                 randomElement.setCounter(randomElement.getCounter() + 1L);
                 randomEventPublishSubject.onNext(new RandomEvent(RandomEvent.Type.UPDATE, randomPosition, randomElement));
-            } else if (isInRange(randomProvider.getPercent(), 50, 85)) {
+            } else if (isInRange(percent, 50, 85)) {
                 Log.d(TAG, "RESET counter of " + randomPosition + " element");
                 randomElement.setCounter(0L);
                 randomEventPublishSubject.onNext(new RandomEvent(RandomEvent.Type.UPDATE, randomPosition, randomElement));
-            } else if (isInRange(randomProvider.getPercent(), 86, 95)) {
+            } else if (isInRange(percent, 86, 95)) {
                 Log.d(TAG, "DELETE " + randomPosition + " element");
                 list.remove(randomElement);
                 randomEventPublishSubject.onNext(new RandomEvent(RandomEvent.Type.DELETE, randomPosition, randomElement));
-            } else if (isInRange(randomProvider.getPercent(), 96, 100)) {
+            } else if (isInRange(percent, 96, 100)) {
                 Log.d(TAG, "SUM counters of " + randomPosition + " and " + (randomPosition == 0 ? list.size() - 1 : randomPosition - 1) + " elements");
                 randomElement.setCounter(randomElement.getCounter() + list.get(randomPosition == 0 ? list.size() - 1 : randomPosition - 1).getCounter());
                 randomEventPublishSubject.onNext(new RandomEvent(RandomEvent.Type.UPDATE, randomPosition, randomElement));
+            } else {
+                throw new IllegalArgumentException("Illegal argument");
             }
         }
     }

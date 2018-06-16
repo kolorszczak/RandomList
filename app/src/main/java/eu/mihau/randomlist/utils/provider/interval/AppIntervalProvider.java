@@ -12,6 +12,7 @@ import io.reactivex.subjects.PublishSubject;
 //https://medium.com/@CodyEngel/managing-disposables-in-rxjava-2-for-android-388722ae1e8a
 public class AppIntervalProvider {
 
+    private static final String TAG = AppIntervalProvider.class.getSimpleName();
     public PublishSubject<Long> intervalSubject = PublishSubject.create();
     private CompositeDisposable disposable = new CompositeDisposable();
 
@@ -26,9 +27,11 @@ public class AppIntervalProvider {
     public void onStart() {
         disposable.dispose();
         disposable = new CompositeDisposable(Observable.interval(1, TimeUnit.SECONDS)
-                .subscribeOn(schedulerProvider.io())
+                .subscribeOn(schedulerProvider.computation())
                 .observeOn(schedulerProvider.ui())
-                .subscribe(l -> intervalSubject.onNext(currentInterval++),
+                .subscribe(l -> {
+                            intervalSubject.onNext(currentInterval++);
+                        },
                         Throwable::printStackTrace));
     }
 

@@ -1,5 +1,6 @@
 buildscript {
     ext.KotlinVer = '1.2.41'
+    ext.CompilerVer = '3.1.3'
     ext.SupportVer = '27.1.1'
     ext.LifecycleVer = '1.1.1'
     ext.RetrofitVer = '2.4.0'
@@ -23,7 +24,7 @@ buildscript {
         maven { url "https://jitpack.io" }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.2'
+        classpath "com.android.tools.build:gradle:$CompilerVer"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$KotlinVer"
         
 

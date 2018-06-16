@@ -70,7 +70,7 @@ dependencies {
     implementation "android.arch.lifecycle:extensions:$LifecycleVer"
     implementation "android.arch.lifecycle:viewmodel:$LifecycleVer"
     kapt "android.arch.lifecycle:compiler:$LifecycleVer"
-    kapt "com.android.databinding:compiler:3.1.2"
+    kapt "com.android.databinding:compiler:$CompilerVer"
 
     // Squereup
     implementation "com.squareup.retrofit2:retrofit:$RetrofitVer"

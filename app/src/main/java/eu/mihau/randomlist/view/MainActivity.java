@@ -46,8 +46,6 @@ public class MainActivity extends BaseActivity {
         binding.setAdapter(fastAdapter = FastAdapter.with(Collections.singletonList(itemAdapter = new ItemAdapter<>())));
 
         viewModel.randomEventPublishSubject
-                .subscribeOn(schedulerProvider.io())
-                .observeOn(schedulerProvider.ui())
                 .subscribe(randomEvent -> {
                     switch (randomEvent.type) {
                         case CREATE:
