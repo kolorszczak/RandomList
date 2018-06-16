@@ -46,9 +46,11 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@color/md_light_green_500"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
                 android:gravity="center"
                 android:padding="@dimen/default_padding"
                 android:text="@string/start"
+                android:onClick="@{v -> viewModel.start()}"
                 android:textSize="@dimen/text_size_bigger"
                 android:textStyle="bold"/>
 
@@ -62,6 +64,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@color/md_light_green_500"
+                android:onClick="@{v -> viewModel.stop()}"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
                 android:gravity="center"
                 android:padding="@dimen/default_padding"
                 android:text="@string/stop"
