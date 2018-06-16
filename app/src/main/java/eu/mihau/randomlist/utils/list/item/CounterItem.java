@@ -10,8 +10,19 @@ import java.util.List;
 
 import eu.mihau.randomlist.R;
 import eu.mihau.randomlist.databinding.ItemCounterBinding;
+import eu.mihau.randomlist.model.Element;
 
 public class CounterItem extends AbstractItem<CounterItem, CounterItem.ViewHolder> {
+
+    Element element;
+
+    public CounterItem(Element element) {
+        this.element = element;
+    }
+
+    public CounterItem() {
+        this.element = new Element(100L, R.color.colorPrimary);
+    }
 
     @Override
     public int getType() {
@@ -26,8 +37,7 @@ public class CounterItem extends AbstractItem<CounterItem, CounterItem.ViewHolde
     @Override
     public void bindView(@NonNull CounterItem.ViewHolder holder, @NonNull List<Object> payloads) {
         super.bindView(holder, payloads);
-        holder.binding.setText("Test");
-        holder.binding.setTint(R.color.md_green_500);
+        holder.binding.setElement(element);
     }
 
     @NonNull
