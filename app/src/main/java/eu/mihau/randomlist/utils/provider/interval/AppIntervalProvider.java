@@ -13,7 +13,7 @@ import io.reactivex.subjects.PublishSubject;
 public class AppIntervalProvider {
 
     public PublishSubject<Long> intervalSubject = PublishSubject.create();
-    public CompositeDisposable disposable = new CompositeDisposable();
+    private CompositeDisposable disposable = new CompositeDisposable();
 
     private Long currentInterval = 0L;
     private SchedulerProvider schedulerProvider;

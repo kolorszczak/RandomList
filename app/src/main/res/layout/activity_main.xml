@@ -28,6 +28,9 @@
             android:id="@+id/recyclerView"
             android:layout_weight="1"
             android:adapter="@{adapter}"
+            android:paddingTop="@dimen/half_padding"
+            android:overScrollMode="never"
+            android:scrollbars="none"
             app:itemDecorator="@{R.drawable.drawable_separator}"
             app:layoutManager="android.support.v7.widget.LinearLayoutManager"
             tools:listitem="@layout/item_counter"/>
