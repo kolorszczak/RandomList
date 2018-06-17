@@ -8,20 +8,17 @@ import android.support.v4.app.FragmentActivity;
 
 import javax.inject.Inject;
 
-import eu.mihau.randomlist.utils.provider.interval.AppIntervalProvider;
 import eu.mihau.randomlist.utils.provider.random.RandomProvider;
 import eu.mihau.randomlist.utils.provider.scheduler.SchedulerProvider;
 
 public class ViewModelFactory implements ViewModelProvider.Factory {
 
     private SchedulerProvider schedulerProvider;
-    private AppIntervalProvider intervalProvider;
     private RandomProvider randomProvider;
 
     @Inject
-    public ViewModelFactory(SchedulerProvider schedulerProvider, AppIntervalProvider intervalProvider, RandomProvider randomProvider) {
+    public ViewModelFactory(SchedulerProvider schedulerProvider, RandomProvider randomProvider) {
         this.schedulerProvider = schedulerProvider;
-        this.intervalProvider = intervalProvider;
         this.randomProvider = randomProvider;
     }
 
@@ -30,7 +27,7 @@ public class ViewModelFactory implements ViewModelProvider.Factory {
     @SuppressWarnings("unchecked")
     public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
         if (modelClass.isAssignableFrom(MainViewModel.class)) {
-            return (T) new MainViewModel(schedulerProvider, intervalProvider, randomProvider);
+            return (T) new MainViewModel(schedulerProvider, randomProvider);
         }
         throw new RuntimeException("Unknown viewModel class");
     }

@@ -54,7 +54,7 @@ public class AppModule {
 
     @Provides
     @Singleton
-    ViewModelFactory provideViewModelFactory(SchedulerProvider schedulerProvider, AppIntervalProvider intervalProvider, RandomProvider randomProvider) {
-        return new ViewModelFactory(schedulerProvider, intervalProvider, randomProvider);
+    ViewModelFactory provideViewModelFactory(SchedulerProvider schedulerProvider, RandomProvider randomProvider) {
+        return new ViewModelFactory(schedulerProvider, randomProvider);
     }
 }
