@@ -22,6 +22,6 @@ public class AppRandomProvider implements RandomProvider {
 
     @Override
     public int getColor() {
-        return random.nextInt() % 2 == 0 ? R.color.md_red_400 : R.color.md_blue_300;
+        return random.nextInt() % 2 == 0 ? R.color.md_red_500 : R.color.md_blue_300;
     }
 }

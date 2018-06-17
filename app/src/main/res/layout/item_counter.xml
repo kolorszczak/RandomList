@@ -4,6 +4,8 @@
         xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <import type="eu.mihau.randomlist.R"/>
+
         <variable
             name="element"
             type="eu.mihau.randomlist.model.Element" />
@@ -37,7 +39,7 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:padding="@dimen/half_padding"
-                android:text="@{element.getCounter()}"
+                android:text="@{element.getColorRes() == R.color.md_red_500 ? element.getCounter() : element.getCounter() * 3}"
                 android:textColor="@color/md_black_1000"
                 android:textSize="@dimen/text_size_medium"
                 tools:text="1"
