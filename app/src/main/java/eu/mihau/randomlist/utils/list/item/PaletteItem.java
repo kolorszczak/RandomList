@@ -64,6 +64,10 @@ public class PaletteItem extends AbstractItem<PaletteItem, PaletteItem.ViewHolde
 
     private void setupLabels(ViewHolder holder, Bitmap bitmap) {
         Palette.from(bitmap).generate(palette -> {
+            holder.lay0.setBackgroundColor(getContrastColor(palette.getDominantColor(Color.RED)));
+            holder.row0a.setTextColor(palette.getDominantSwatch() != null ? getContrastColor(palette.getDominantSwatch().getTitleTextColor()) : Color.RED);
+            holder.row0b.setTextColor(palette.getDominantSwatch() != null ? getContrastColor(palette.getDominantSwatch().getBodyTextColor()) : Color.RED);
+
             holder.lay1.setBackgroundColor(palette.getDominantColor(Color.RED));
             holder.row1a.setTextColor(palette.getDominantSwatch() != null ? palette.getDominantSwatch().getTitleTextColor() : Color.RED);
             holder.row1b.setTextColor(palette.getDominantSwatch() != null ? palette.getDominantSwatch().getBodyTextColor() : Color.RED);
@@ -95,6 +99,12 @@ public class PaletteItem extends AbstractItem<PaletteItem, PaletteItem.ViewHolde
         });
     }
 
+    private Integer getContrastColor(int color) {
+        return Color.rgb(255-Color.red(color),
+                255-Color.green(color),
+                255-Color.blue(color));
+    }
+
     @NonNull
     @Override
     public PaletteItem.ViewHolder getViewHolder(View v) {
@@ -104,12 +114,13 @@ public class PaletteItem extends AbstractItem<PaletteItem, PaletteItem.ViewHolde
     static class ViewHolder extends RecyclerView.ViewHolder {
 
         ImageView image;
-        TextView row1a, row1b, row2a, row2b, row3a, row3b, row4a, row4b, row5a, row5b, row6a, row6b, row7a, row7b;
-        LinearLayout lay1, lay2, lay3, lay4, lay5, lay6, lay7;
+        TextView row0a, row0b, row1a, row1b, row2a, row2b, row3a, row3b, row4a, row4b, row5a, row5b, row6a, row6b, row7a, row7b;
+        LinearLayout lay0, lay1, lay2, lay3, lay4, lay5, lay6, lay7;
 
         ViewHolder(View view) {
             super(view);
             image = view.findViewById(R.id.image);
+            row0a = view.findViewById(R.id.row0a);
             row1a = view.findViewById(R.id.row1a);
             row2a = view.findViewById(R.id.row2a);
             row3a = view.findViewById(R.id.row3a);
@@ -117,6 +128,7 @@ public class PaletteItem extends AbstractItem<PaletteItem, PaletteItem.ViewHolde
             row5a = view.findViewById(R.id.row5a);
             row6a = view.findViewById(R.id.row6a);
             row7a = view.findViewById(R.id.row7a);
+            row0b = view.findViewById(R.id.row0b);
             row1b = view.findViewById(R.id.row1b);
             row2b = view.findViewById(R.id.row2b);
             row3b = view.findViewById(R.id.row3b);
@@ -124,6 +136,7 @@ public class PaletteItem extends AbstractItem<PaletteItem, PaletteItem.ViewHolde
             row5b = view.findViewById(R.id.row5b);
             row6b = view.findViewById(R.id.row6b);
             row7b = view.findViewById(R.id.row7b);
+            lay0 = view.findViewById(R.id.lay0);
             lay1 = view.findViewById(R.id.lay1);
             lay2 = view.findViewById(R.id.lay2);
             lay3 = view.findViewById(R.id.lay3);
