@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/half_padding"
+    android:layout_marginBottom="@dimen/half_padding"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/image"
+        style="@style/ImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        tools:src="@drawable/merchant_1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/lay1"
+            android:padding="@dimen/small_padding"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/md_white_1000"
+                android:layout_height="wrap_content"
+                android:text="Dominant Color"
+                android:layout_marginRight="@dimen/default_padding"/>
+
+            <TextView
+                android:id="@+id/row1a"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Title Text Color"/>
+
+            <TextView
+                android:id="@+id/row1b"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Body Text Color"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/lay2"
+            android:padding="@dimen/small_padding"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/md_white_1000"
+                android:layout_height="wrap_content"
+                android:text="Muted Color"
+                android:layout_marginRight="@dimen/default_padding"/>
+
+            <TextView
+                android:id="@+id/row2a"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Title Text Color"/>
+
+            <TextView
+                android:id="@+id/row2b"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Body Text Color"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/lay3"
+            android:padding="@dimen/small_padding"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/md_white_1000"
+                android:layout_height="wrap_content"
+                android:text="Vibrant Color"
+                android:layout_marginRight="@dimen/default_padding"/>
+
+            <TextView
+                android:id="@+id/row3a"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Title Text Color"/>
+
+            <TextView
+                android:id="@+id/row3b"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Body Text Color"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/lay4"
+            android:padding="@dimen/small_padding"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/md_white_1000"
+                android:layout_height="wrap_content"
+                android:text="Dark Muted Color"
+                android:layout_marginRight="@dimen/default_padding"/>
+
+            <TextView
+                android:id="@+id/row4a"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Title Text Color"/>
+
+            <TextView
+                android:id="@+id/row4b"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Body Text Color"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/lay5"
+            android:padding="@dimen/small_padding"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/md_white_1000"
+                android:layout_height="wrap_content"
+                android:text="Dark Vibrant Color"
+                android:layout_marginRight="@dimen/default_padding"/>
+
+            <TextView
+                android:id="@+id/row5a"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Title Text Color"/>
+
+            <TextView
+                android:id="@+id/row5b"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Body Text Color"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/lay6"
+            android:padding="@dimen/small_padding"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/md_white_1000"
+                android:layout_height="wrap_content"
+                android:text="Light Muted Color"
+                android:layout_marginRight="@dimen/default_padding"/>
+
+            <TextView
+                android:id="@+id/row6a"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Title Text Color"/>
+
+            <TextView
+                android:id="@+id/row6b"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Body Text Color"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/lay7"
+            android:padding="@dimen/small_padding"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/md_white_1000"
+                android:layout_height="wrap_content"
+                android:text="Light Vibrant Color"
+                android:layout_marginRight="@dimen/default_padding"/>
+
+            <TextView
+                android:id="@+id/row7a"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Title Text Color"/>
+
+            <TextView
+                android:id="@+id/row7b"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Body Text Color"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

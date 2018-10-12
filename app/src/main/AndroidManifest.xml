@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".view.MainActivity"
+            android:name=".view.ListActivity"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/AppTheme.Launcher"
             android:windowSoftInputMode="stateAlwaysHidden">
@@ -19,5 +19,15 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <!--<activity-->
+            <!--android:name=".view.MainActivity"-->
+            <!--android:screenOrientation="sensorPortrait"-->
+            <!--android:theme="@style/AppTheme.Launcher"-->
+            <!--android:windowSoftInputMode="stateAlwaysHidden">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN"/>-->
+                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
     </application>
 </manifest>
